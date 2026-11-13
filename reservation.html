@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+                <html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noucha Travel - Réservation</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>✈ Noucha Travel</h1>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="destination.html">Destinations</a>
+        <a href="reservation.html">Réservation</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h2>Réservez votre voyage</h2>
+    <p>Remplissez le formulaire ci-dessous.</p>
+</section>
+
+<section class="form-container">
+
+    <h2>Formulaire de réservation</h2>
+
+    <form action="#" method="post">
+
+        <label>Nom et prénom :</label>
+        <input type="text" name="nom" placeholder="Votre nom" required>
+
+        <label>Adresse e-mail :</label>
+        <input type="email" name="email" placeholder="exemple@gmail.com" required>
+
+        <label>Numéro de téléphone :</label>
+        <input type="tel" name="telephone" placeholder="+216 ..." required>
+
+        <label>Choisir une destination :</label>
+        <select name="destination" required>
+            <option value="">-- Choisir --</option>
+            <option value="France">France</option>
+            <option value="Italie">Italie</option>
+            <option value="Maldives">Maldives</option>
+            <option value="Turquie">Turquie</option>
+        </select>
+
+        <label>Date de départ :</label>
+        <input type="date" name="date" required>
+
+        <label>Nombre de personnes :</label>
+        <input type="number" name="personnes" min="1" max="20" required>
+
+        <label>Type de voyage :</label>
+        <div class="radio-group">
+            <input type="radio" name="type" value="Famille" required>
+            <span>En famille</span>
+
+            <input type="radio" name="type" value="Couple">
+            <span>En couple</span>
+
+            <input type="radio" name="type" value="Amis">
+            <span>Entre amis</span>
+        </div>
+
+        <label>Message supplémentaire :</label>
+        <textarea name="message" rows="4" placeholder="Vos demandes..."></textarea>
+
+        <div class="form-buttons">
+            <button type="submit">Envoyer</button>
+            <button type="reset" class="reset">Réinitialiser</button>
+        </div>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Noucha Travel - Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
+                                                                          
