@@ -29,7 +29,7 @@
 
     <h2>Formulaire de réservation</h2>
 
-    <form action="#" method="post">
+   <form action="#" method="post" novalidate>
 
         <label>Nom et prénom :</label>
         <input type="text" name="nom" placeholder="Votre nom" required>
@@ -48,12 +48,12 @@
             <option value="Maldives">Maldives</option>
             <option value="Turquie">Turquie</option>
         </select>
-
         <label>Date de départ :</label>
-        <input type="date" name="date" required>
-
+        <input type="date" id="datedep" name="datedep" required>
+        <label>Date de retour :</label>
+        <input type="date" id="dateret" name="dateret" required>
         <label>Nombre de personnes :</label>
-        <input type="number" name="personnes" min="1" max="20" required>
+        <input type="number" id="nbp" name="nbp" min="1" max="20" required>
 
         <label>Type de voyage :</label>
         <div class="radio-group">
@@ -76,13 +76,12 @@
         </div>
 
     </form>
-
 </section>
 
 <footer>
     <p>© 2026 Noucha Travel - Tous droits réservés.</p>
 </footer>
-
+<script src="controlejs.js"></script>
 </body>
 </html>
                                                                           
