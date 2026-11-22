@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nos Vols | Noucha Travel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Noucha Travel</h1>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="destination.html">Destinations</a>
+            <a href="reservation.html">Réservation</a>
+            <a href="vols.html">Nos Vols</a>
+        </nav>
+    </header>
+    <main>
+    <section class="page-title">
+        <h2>Nos Vols</h2>
+        <p>Voyagez vers vos destinations préférées</p>
+    </section>
+    <section class="vols-intro">
+        <h2>Découvrez nos vols</h2>
+
+        <p>
+            Noucha Travel vous propose une sélection de vols
+            pour voyager confortablement et découvrir le monde.
+        </p>
+    </section>
+    <section class="vols-section">
+
+        <h2>Vols disponibles</h2>
+
+        <div class="vols-container" id="listeVols">
+
+            <article class="vol-card"
+                data-depart="Tunis"
+                data-arrivee="Paris">
+
+                <img src="nouv.jpeg" alt="Avion Nouvelair">
+
+                <div class="vol-info">
+
+                    <h3>Tunis → Paris</h3>
+
+                    <p><strong>Compagnie :</strong> Nouvelair</p>
+                    <p><strong>Départ :</strong> 08:30</p>
+                    <p><strong>Arrivée :</strong> 11:00</p>
+                    <p><strong>Durée :</strong> 2h30</p>
+
+                    <p class="price">
+                        À partir de 450 DT
+                    </p>
+
+                </div>
+            </article>
+
+            <article class="vol-card"
+                data-depart="Tunis"
+                data-arrivee="Rome">
+
+                <img src="tunisa.jpeg" alt="Avion Tunisair">
+
+                <div class="vol-info">
+
+                    <h3>Tunis → Rome</h3>
+
+                    <p><strong>Compagnie :</strong> Tunisair</p>
+                    <p><strong>Départ :</strong> 10:00</p>
+                    <p><strong>Arrivée :</strong> 12:00</p>
+                    <p><strong>Durée :</strong> 2h</p>
+
+                    <p class="price">
+                        À partir de 380 DT
+                    </p>
+
+                </div>
+            </article>
+
+            <article class="vol-card"
+                data-depart="Sfax"
+                data-arrivee="Istanbul">
+
+                <img src="tunisa.jpeg" alt="Avion Tunisair">
+
+                <div class="vol-info">
+
+                    <h3>Sfax → Istanbul</h3>
+
+                    <p><strong>Compagnie :</strong> Tunisair</p>
+                    <p><strong>Départ :</strong> 14:00</p>
+                    <p><strong>Arrivée :</strong> 17:00</p>
+                    <p><strong>Durée :</strong> 3h</p>
+
+                    <p class="price">
+                        À partir de 520 DT
+                    </p>
+
+                </div>
+            </article>
+            <article class="vol-card"
+                data-depart="Tunis"
+                data-arrivee="Dubai">
+
+                <img src="qatar.jpeg" alt="Avion Qatar Airways">
+
+                <div class="vol-info">
+
+                    <h3>Tunis → Dubai</h3>
+
+                    <p><strong>Compagnie :</strong> Qatar Airways</p>
+                    <p><strong>Départ :</strong> 20:00</p>
+                    <p><strong>Arrivée :</strong> 02:00</p>
+                    <p><strong>Durée :</strong> 6h</p>
+
+                    <p class="price">
+                        À partir de 750 DT
+                    </p>
+
+                </div>
+            </article>
+
+        </div>
+
+        <p id="aucunVol">
+            Aucun vol ne correspond à votre recherche.
+        </p>
+
+    </section>
+
+    <section class="form-container" id="reservationBillet">
+
+        <h2>Réserver votre billet d'avion</h2>
+
+        <p>
+            Remplissez le formulaire pour effectuer votre demande
+            de réservation.
+        </p>
+
+        
+<form id="formBillet" novalidate>
+
+    <label for="nom">Nom et prénom :</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="telephone">Numéro de téléphone :</label>
+    <input type="tel" id="telephone"
+           placeholder="Exemple : 22123456"
+           maxlength="8" required>
+
+    <label for="email">Adresse email :</label>
+    <input type="email" id="email"
+           placeholder="exemple@gmail.com" required>
+
+    <label for="cin">Numéro CIN :</label>
+    <input type="text" id="cin"
+           placeholder="8 chiffres"
+           maxlength="8" required>
+
+    <label for="villeDepart">Ville de départ :</label>
+    <select id="villeDepart" name="villeDepart" required>
+        <option value="">Choisir une ville</option>
+        <option value="Sfax">Sfax</option>
+        <option value="Tunis">Tunis</option>
+    </select>
+
+    <label for="destination">Destination :</label>
+    <select id="destination" name="destination" required>
+        <option value="">Choisir une destination</option>
+        <option value="Paris">Paris</option>
+        <option value="Rome">Rome</option>
+        <option value="Istanbul">Istanbul</option>
+        <option value="Dubai">Dubai</option>
+    </select>
+
+    <label for="compagnie">Compagnie aérienne :</label>
+    <select id="compagnie" name="compagnie" required>
+        <option value="">Choisir une compagnie</option>
+        <option value="Nouvelair">Nouvelair</option>
+        <option value="Tunisair">Tunisair</option>
+        <option value="Qatar Airways">Qatar Airways</option>
+    </select>
+
+    <label for="dateDepart">Date de départ :</label>
+    <input type="date" id="dateDepart"
+           name="dateDepart" required>
+
+    <label for="passagers">Nombre de passagers :</label>
+    <input type="number" id="passagers"
+           name="passagers" min="1" max="10"
+           value="1" required>
+
+    <label for="classe">Classe :</label>
+    <select id="classe" name="classe" required>
+        <option value="">Choisir une classe</option>
+        <option value="Économique">Économique</option>
+        <option value="Business">Business</option>
+    </select>
+
+    <div class="form-buttons">
+
+        <button type="submit" class="btn">
+            Confirmer ma réservation
+        </button>
+
+        <button type="reset" class="btn">
+            Réinitialiser
+        </button>
+
+    </div>
+
+</form>
+
+
+    </section>
+
+
+    <section class="vols-info">
+
+        <h2>Pourquoi choisir Noucha Travel ?</h2>
+
+        <div class="service-container">
+
+            <div class="service">
+                <h3>✈️ Vols variés</h3>
+                <p>Un choix de destinations pour tous vos voyages.</p>
+            </div>
+
+            <div class="service">
+                <h3>💙 Service de qualité</h3>
+                <p>Nous vous accompagnons dans votre réservation.</p>
+            </div>
+
+            <div class="service">
+                <h3>🌍 Voyage facile</h3>
+                <p>Préparez votre voyage en quelques étapes.</p>
+            </div>
+
+        </div>
+
+    </section>
+   <footer>
+    <p>© 2026 Noucha Travel - Tous droits réservés.</p>
+</footer>
+</main>
+<a href="#" class="back-to-top">↑</a>
+<script src="controle_vols.js" defer></script>
+</body>
+</html>

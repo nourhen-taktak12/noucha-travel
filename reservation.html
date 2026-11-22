@@ -1,13 +1,13 @@
 
 <!DOCTYPE html>
-                <html lang="fr">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noucha Travel - Réservation</title>
    <link rel="stylesheet" href="style.css">
 </head>
-<body id="top"><body>
+<body id="top">
 
 <header>
     <h1>✈ Noucha Travel</h1>
@@ -16,9 +16,10 @@
         <a href="index.html">Accueil</a>
         <a href="destination.html">Destinations</a>
         <a href="reservation.html">Réservation</a>
+        <a href="vols.html">Nos Vols</a>
     </nav>
 </header>
-
+<main>
 <section class="page-title">
     <h2>Réservez votre voyage</h2>
     <p>Remplissez le formulaire ci-dessous.</p>
@@ -28,11 +29,10 @@
 
     <h2>Formulaire de réservation</h2>
 
-   <form action="#" method="post" novalidate>
+   <form  method="post" novalidate id="formReservation">
 
-        <label>Nom et prénom :</label>
-        <input type="text" name="nom" placeholder="Votre nom" required>
-
+         <label for="nom">Nom et prénom :</label>
+        <input type="text" id="nom" name="nom" required>
         <label>Adresse e-mail :</label>
         <input type="email" name="email" placeholder="exemple@gmail.com" required>
 
@@ -69,19 +69,28 @@
         <label>Message supplémentaire :</label>
         <textarea name="message" rows="4" placeholder="Vos demandes..."></textarea>
 
-        <div class="form-buttons">
-            <button type="submit">Envoyer</button>
-            <button type="reset" class="reset">Réinitialiser</button>
-        </div>
+       <div class="form-buttons">
+
+        <button type="submit" class="btn">
+            reserver
+        </button>
+
+        <button type="reset" class="btn">
+            Réinitialiser
+        </button>
+
+    </div>
 
     </form>
 </section>
 
+
 <footer>
     <p>© 2026 Noucha Travel - Tous droits réservés.</p>
 </footer>
+</main>
 <a href="#" class="back-to-top">↑</a>
-<script src="controlejs.js"></script>
+<script src="controlejs.js" defer></script>
 </body>
 </html>
                                                                           

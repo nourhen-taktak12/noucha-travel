@@ -1,4 +1,3 @@
-
 // Récupération des éléments
 let formulaire = document.querySelector("form");
 

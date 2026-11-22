@@ -5,10 +5,19 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    min-height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f8fc;
     color: #17365d;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* HEADER */
@@ -216,7 +225,6 @@ nav a:hover {
     color: #1686b9;
     font-weight: bold;
 }
-/*wsolt houni*/
 
 /* FORMULAIRE */
 
@@ -251,13 +259,6 @@ form textarea {
     border-radius: 7px;
     font-size: 15px;
 }
-
-form input:focus,
-form select:focus,
-form textarea:focus {
-    outline: 2px solid #42a5d9;
-}
-
 .radio-group {
     display: flex;
     align-items: center;
@@ -290,13 +291,15 @@ form textarea:focus {
 }
 
 /* FOOTER */
-
 footer {
     background-color: #10365f;
     color: white;
     text-align: center;
     padding: 25px;
-    margin-top: 30px;
+    margin-top: auto;
+}
+main {
+    flex: 1;
 }
 
 /* RESPONSIVE */
@@ -365,4 +368,253 @@ form textarea:focus::placeholder {
 }
 html {
     scroll-behavior: smooth;
+}
+
+/* =========================
+   PAGE NOS VOLS
+========================= */
+
+.vols-intro {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.vols-intro h2 {
+    color: #17365d;
+    margin-bottom: 15px;
+}
+
+.vols-intro p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* RECHERCHE */
+
+.recherche-vols {
+    background-color: white;
+    max-width: 900px;
+    margin: 20px auto 50px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.recherche-vols h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #17365d;
+}
+
+#formRechercheVol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: center;
+    gap: 20px;
+}
+
+.champ-vol {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.champ-vol label {
+    font-weight: bold;
+    color: #17365d;
+}
+
+.champ-vol select {
+    padding: 12px;
+    border: 1px solid #b7d9ed;
+    border-radius: 8px;
+    background-color: #f4f8fc;
+    color: #17365d;
+    outline: none;
+}
+
+.champ-vol select:focus {
+    border-color: #1976b9;
+}
+
+#messageRecherche {
+    text-align: center;
+    color: #1976b9;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* CARTES DES VOLS */
+
+.vols-section {
+    padding: 30px 7%;
+}
+
+.vols-section > h2 {
+    text-align: center;
+    color: #17365d;
+    margin-bottom: 35px;
+}
+
+.vols-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.vol-card {
+    background-color: white;
+    width: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+
+.vol-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(25, 118, 185, 0.20);
+}
+
+.vol-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.vol-info {
+    padding: 20px;
+}
+
+.vol-info h3 {
+    color: #17365d;
+    margin-bottom: 15px;
+}
+
+.vol-info p {
+    margin: 10px 0;
+    color: #52677d;
+    font-size: 14px;
+}
+
+.vol-info .price {
+    color: #1686b9;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+/* MESSAGE AUCUN VOL */
+
+#aucunVol {
+    display: none;
+    text-align: center;
+    color: #b83232;
+    font-weight: bold;
+    margin: 30px 0;
+}
+/* INFORMATIONS */
+
+.vols-info {
+    padding: 40px 7%;
+    text-align: center;
+}
+
+.vols-info h2 {
+    color: #17365d;
+    margin-bottom: 30px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .recherche-vols {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #formRechercheVol {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .champ-vol {
+        width: 100%;
+    }
+
+    .vol-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .vols-section {
+        padding: 20px;
+    }
+
+}
+
+/* FORMULAIRE RESERVATION BILLET */
+
+#reservationBillet {
+    margin: 50px auto;
+}
+
+#reservationBillet h2 {
+    text-align: center;
+    color: #17365d;
+    margin-bottom: 15px;
+}
+
+#reservationBillet > p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#formBillet {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#formBillet label {
+    font-weight: bold;
+    color: #17365d;
+}
+
+#formBillet input,
+#formBillet select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b7d9ed;
+    border-radius: 8px;
+    background-color: #f4f8fc;
+    color: #17365d;
+}
+
+#formBillet input:focus,
+#formBillet select:focus {
+    outline: none;
+    border-color: #1976b9;
+}
+
+#formBillet .form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#messageBillet {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
 }
